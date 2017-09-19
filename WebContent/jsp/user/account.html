@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="zh"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="zh"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="zh"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+        个人管理
+    </title><link href="css/style.min.css" rel="stylesheet"/>
+
+    <link href="css/croppic.css" rel="stylesheet"/>
+
+    <script src="js/modernizr-2.8.3.js"></script>
+</head>
+<body class="right-sb">
+
+
+<div class="container">
+
+
+    <!-- Start Header -->
+    <header class="header-wrap clearfix">
+        <div class="logo" role="banner">
+            <a href="index.html" title="梦豆投票网" rel="home">
+                <div class="logo-text">
+                    <h1 class="logo-name">梦豆投票网</h1>
+                </div>
+            </a>
+        </div>
+        <nav class="main-nav clearfix">
+            <div class="menu-navigation-container">
+                <ul id="menu-navigation" class="menu">
+
+                    <li><a class="username" href="account.html" title="管理">hughst</a>
+                        <ul class="sub-menu">
+                            <li><a href="addvote.html">发起投票</a></li>
+                            <li><a href="mylist.html">我的菜单</a></li>
+                            <li>
+                                <form Id="logoutForm" action="#" method="post">
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <div class="content-section clearfix">
+        <div id="main-content">
+            <article class="content-margin content-background clearfix">
+                <header class="page-title-wrap">
+                    <h1 class="page-title">管理账户</h1>
+                </header>
+                <div class="entry-content clearfix">
+                    <form action="account.html" method="post">
+                        <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+                        </ul></div>
+                        <p>
+                        <div id="croppic" class="author-avatar image-frame">
+                            <img alt="头像" src="img/nohead.jpg" class="avatar avatar-150 photo" height="150" width="150" />
+                        </div>
+                        <br />
+                        <div class="author-avatar">
+                            <input type="button" id="cropContainerHeaderButton" value="上传头像" />
+                        </div>
+                        <input Value="img/nohead.jpg" id="HeadFace" name="HeadFace" type="hidden" value="" />
+                        </p>
+                        <p>
+                            <label for="Members_Email">注册邮箱</label><br />
+                            755892191@qq.com
+                        </p>
+                        <p>
+                            <label for="Members_LoveName">昵称</label><br />
+                            hughst
+                        </p>
+                        <p>
+                            <label for="Password">新密码</label><br />
+                            <input data-val="true" data-val-length="新密码 必须至少包含 6 个字符，最多包含 16 个字符。" data-val-length-max="16" data-val-length-min="6" data-val-required="新密码 字段是必需的。" id="Password" name="Password" type="password" />
+                            <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </p>
+                        <p>
+                            <label for="vPassword">重复密码</label><br />
+                            <input data-val="true" data-val-length="重复密码 必须至少包含 6 个字符，最多包含 16 个字符。" data-val-length-max="16" data-val-length-min="6" data-val-required="重复密码 字段是必需的。" id="vPassword" name="vPassword" type="password" />
+                            <span class="field-validation-valid" data-valmsg-for="vPassword" data-valmsg-replace="true"></span>
+                        </p>
+                        <p>
+                            <input type="submit" value="保存" />
+                        </p>
+                    </form>
+                </div>
+            </article>
+        </div>
+        <aside id="main-sidebar" class="sidebar">
+            <div class="sb-widget">
+                <div class="widget-content">
+                    <form action="/Search" class="searchform" id="searchform" method="get">
+                        <div>
+                            <input type="text" value="" name="keywords" id="keywords" />
+                            <input type="submit" id="searchsubmit" value="搜索" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+
+    <footer id="footer" class="footer clearfix">
+        <nav class="social-nav clearfix">
+            <div class="menu-social-container">
+                <ul id="menu-social" class="menu">
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">腾讯微博</span></a></li>
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">新浪微博</span></a></li>
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">微信</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright-wrap">
+            <p class="copyright">Copyright &copy; 2017 <a href="index.html" title="梦豆投票网">梦豆投票网</a></p>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script src="js/common.min.js"></script>
+
+
+<script src="js/croppic.js"></script>
+
+<script src="js/account.js"></script>
+
+
+</body>
+</html>

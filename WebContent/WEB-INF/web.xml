@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+					http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<welcome-file-list>
+		<welcome-file>/welcome.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<listener>
+		<description>系统启动监听器</description>
+		<display-name>系统启动监听器</display-name>
+		<listener-class>com.easyvote.web.listener.ThisSystemBootstrapListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>权限过滤器</filter-name>
+		<filter-class>com.easyvote.web.filter.AuthorizeFilter</filter-class>
+		<init-param>
+			<description>白名单</description>
+			<param-name>white-urls</param-name>
+			<param-value>
+  		/admin/login.do
+  		/jsp/admin/login.jsp  		
+  		</param-value>
+		</init-param>
+		<init-param>
+			<param-name>notLogin</param-name>
+			<param-value>/jsp/admin/login.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>权限过滤器</filter-name>
+		<url-pattern>/jsp/admin/*</url-pattern>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>字符编码过滤器</filter-name>
+		<filter-class>com.easyvote.web.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>字符编码过滤器</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>数据库连接关闭过滤器</filter-name>
+		<filter-class>com.easyvote.web.filter.CloseConnectionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>数据库连接关闭过滤器</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+
+
+
+
+	<session-config>
+		<session-timeout>5</session-timeout>
+	</session-config>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/error/404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/error/500.html</location>
+	</error-page>
+</web-app>

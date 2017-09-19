@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="zh"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="zh"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="zh"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+        创建投票
+    </title><link href="css/style.min.css" rel="stylesheet"/>
+
+    <link href="css/froalaeditor.min.css" rel="stylesheet"/>
+
+    <link href="css/DateTimePicker.css" rel="stylesheet"/>
+
+    <link href="css/fine-uploader5.3.0.css" rel="stylesheet"/>
+
+    <link href="css/notifIt.css" rel="stylesheet"/>
+
+    <script src="js/modernizr-2.8.3.js"></script>
+</head>
+<body class="right-sb">
+
+
+<div class="container">
+
+
+    <!-- Start Header -->
+    <header class="header-wrap clearfix">
+        <div class="logo" role="banner">
+            <a href="index.html" title="梦豆投票网" rel="home">
+                <div class="logo-text">
+                    <h1 class="logo-name">梦豆投票网</h1>
+                </div>
+            </a>
+        </div>
+        <nav class="main-nav clearfix">
+            <div class="menu-navigation-container">
+                <ul id="menu-navigation" class="menu">
+
+                    <li><a class="username" href="account.html" title="管理">hughst</a>
+                        <ul class="sub-menu">
+                            <li><a href="addvote.html">发起投票</a></li>
+                            <li><a href="mylist.html">我的菜单</a></li>
+                            <li>
+                                <form Id="logoutForm" action="#" method="post">
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="help.html">帮助</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <div class="content-section clearfix">
+
+        <div id="main-content" class="content">
+            <form action="addvote.html" method="post" onsubmit="return ValidateVote()"><input name="__RequestVerificationToken" type="hidden" value="kP4nTFrE4dolMygSxKUzb4uz1jU_aARPNMeEsVwH3V3cSzXSnriKWO0dht5RSAQo1KM5wbEujEfxxnk5vzJk9edE6bp4n-pJf_mguyE3gQQk86T2vedYr0H_n9u9G6oH0" />
+                <article class="loop-container content-margin clearfix">
+                    <header class="page-title-wrap">
+                        <h1 class="page-title">创建投票</h1>
+                    </header>
+                    <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+                    </ul></div>
+                    <div class="entry-content clearfix">
+                        <p>
+                            <label for="VoteName">投票标题</label><br />
+                            <input data-val="true" data-val-length="投票标题 必须至少包含 1 个字符，最多包含 200 个字符。" data-val-length-max="200" data-val-length-min="1" data-val-required="投票标题 不能为空" id="VoteName" name="VoteName" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="VoteName" data-valmsg-replace="true"></span>
+                        </p>
+                        <p>
+                            <input type="button" class="content_button" value="添加说明" />
+                        </p>
+                        <p class="inputvote-content">
+                            <textarea cols="20" id="Content" name="Content" rows="2">
+</textarea>
+                            <span class="field-validation-valid" data-valmsg-for="Content" data-valmsg-replace="true"></span>
+                        </p>
+
+
+                        <ul id="options_list" class="item-list">
+                            <li class="options_list_var">
+                                <div class="clearfix">
+                                    <label for="item-0" for-format="item-%d">选项1</label><br />
+                                    <input data-val="true" data-val-length="选项标题 必须至少包含 1 个字符，最多包含 200 个字符。" data-val-length-max="200" data-val-length-min="1" data-val-required="选项标题 不能为空" id="InputVoteItemList_0__ItemName" id-format="InputVoteItemList_[%d]__ItemName" name="InputVoteItemList[0].ItemName" name-format="InputVoteItemList[%d].ItemName" type="text" value="" /><br />
+                                    <label name="picbutton_0" id="picbutton_0" role="button" class="options_input"><input type="button" value="图片" /></label>
+                                    <label class="options_input"><input type="button" id="add-viedo" value="视频" /></label>
+                                    <label class="options_input"><input type="button" id="add-content" value="简介" /></label>
+                                    <label class="options_input"><input type="button" class="options_list_del" value="删除" /></label>
+                                </div>
+                                <div name="options_list_0" id="options_list_0"></div>
+                                <div class="item-vid"><input id="InputVoteItemList_0__Vid" id-format="InputVoteItemList_[%d]__Vid" name="InputVoteItemList[0].Vid" name-format="InputVoteItemList[%d].Vid" placeholder="请输入视频地址" type="text" value="" /></div>
+                                <div class="item-content"><textarea cols="20" id="InputVoteItemList_0__Content" id-format="InputVoteItemList_[%d]__Content" name="InputVoteItemList[0].Content" name-format="InputVoteItemList[%d].Content" rows="2">
+</textarea></div>
+                                <input class="pic-link" id="InputVoteItemList_0__Pic" id-format="InputVoteItemList_[%d]__pic" name="InputVoteItemList[0].Pic" name-format="InputVoteItemList[%d].pic" type="hidden" value="" />
+                            </li>
+                        </ul>
+                        <input type="button" class="options_list_add" id="add_item" value="增加选项" />
+                    </div>
+                </article>
+
+                <section class="loop-container related-posts content-background content-margin">
+                    <header class="page-title-wrap">
+                        <h1 class="page-title">功能设置</h1>
+                    </header>
+                    <ul class="related-wrap">
+                        <li>
+                            <div class="function_tag">
+                                单选多选：
+                                <label>单选</label>
+                                <label>多选</label>
+                                <select id="MaxCheck" name="MaxCheck"><option value="0">无限制</option>
+                                </select>
+                                <input data-val="true" data-val-required="请选择单选或多选" id="SelectType" name="SelectType" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="SelectType" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                投票密码：
+                                <label>是</label>
+                                <label>否</label>
+                                <input data-val="true" data-val-length="投票密码最多包含6位数。" data-val-length-max="6" data-val-regex="投票密码必须是不超过6位的数字密码" data-val-regex-pattern="^[0-9]*$" id="VotePass" name="VotePass" placeholder="请输入不超过6位的数字密码" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="VotePass" data-valmsg-replace="true"></span>
+                                <input data-val="true" data-val-required="请选择是否需要投票密码" id="b_VotePass" name="b_VotePass" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_VotePass" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                票数上限：
+                                <label>是</label>
+                                <label>否</label>
+                                <input data-val="true" data-val-length="票数上限最多包含6位数。" data-val-length-max="6" data-val-regex="票数上限必须是正整数" data-val-regex-pattern="^\d+$" id="SumLimit" name="SumLimit" placeholder="总票数达到多少票后自动结束" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="SumLimit" data-valmsg-replace="true"></span>
+                                <input data-val="true" data-val-required="请选择票数上限" id="b_SumLimit" name="b_SumLimit" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_SumLimit" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                允许重复投票：
+                                <label>是</label>
+                                <label>否</label>
+                                <a href="/Post/2422"  target="_blank"><i class="fa fa-question-circle"></i></a>
+                                <input data-val="true" data-val-length="重复投票时间最多包含6位数。" data-val-length-max="6" data-val-regex="重复投票时间必须是正整数" data-val-regex-pattern="^\d+$" id="Intervals" name="Intervals" placeholder="多少小时后可以再次投票" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="Intervals" data-valmsg-replace="true"></span>
+                                <input data-val="true" data-val-required="请选择是否允许重复投票" id="b_Intervals" name="b_Intervals" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_Intervals" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                投票后显示结果：
+                                <label>是</label>
+                                <label>否</label>
+                                <input data-val="true" data-val-required="请选择投票后是否显示结果" id="b_ResultFlag" name="b_ResultFlag" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_ResultFlag" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                开启票数智能监控：
+                                <label class="checked">是</label>
+                                <a href="/Post/2118"  target="_blank"><i class="fa fa-question-circle"></i> 什么是票数智能监控</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                只能在微信里投票：
+                                <label>是</label>
+                                <label>否</label>
+                                <input data-val="true" data-val-required="请选择是否只能在微信里投票" id="b_WechatFlag" name="b_WechatFlag" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_WechatFlag" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag stylecolor">
+                                风格颜色：
+                                <label>绿</label>
+                                <label>橙</label>
+                                <label>紫</label>
+                                <label>红</label>
+                                <label>黄</label>
+                                <input data-val="true" data-val-required="请选择风格颜色" id="StyleColor" name="StyleColor" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="StyleColor" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                投票分类：
+                                <label>文字投票</label>
+                                <label>图片投票</label>
+                                <label>视频投票</label>
+                                <input data-val="true" data-val-required="请选择投票分类" id="b_SortId" name="b_SortId" type="hidden" value="" />
+                                <span class="field-validation-valid" data-valmsg-for="b_SortId" data-valmsg-replace="true"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="function_tag">
+                                投票截止日期：
+                                <input type="text" name="EndTime" id="EndTime" class="input" data-field="datetime" readonly="readonly" />
+                                <span class="field-validation-valid" data-valmsg-for="EndTime" data-valmsg-replace="true"></span>
+                                <div id="dtBox"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="content-background clearfix">
+                    <h3 class="center-container">
+
+                        <input type="submit" id="addsubmit" class="submit" value="发布投票" />
+
+                    </h3>
+                </div>
+            </form>
+        </div>
+
+
+        <aside id="main-sidebar" class="sidebar">
+
+            <div class="sb-widget">
+                <div class="widget-content">
+                    <form action="/Search" class="searchform" id="searchform" method="get">
+                        <div>
+                            <input type="text" value="" name="keywords" id="keywords" />
+                            <input type="submit" id="searchsubmit" value="搜索" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+
+    <footer id="footer" class="footer clearfix">
+        <nav class="social-nav clearfix">
+            <div class="menu-social-container">
+                <ul id="menu-social" class="menu">
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">腾讯微博</span></a></li>
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">新浪微博</span></a></li>
+                    <li class="menu-item"><a target="_blank" href="#"><span class="social-icon"><i class="fa fa-social"></i></span><span class="screen-reader-text">微信</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="copyright-wrap">
+            <p class="copyright">Copyright &copy; 2017 <a href="index.html" title="梦豆投票网">梦豆投票网</a></p>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script src="js/common.min.js"></script>
+
+
+<script src="js/froala_editor.js"></script>
+
+<script src="js/plugins.min.js"></script>
+
+<script src="js/zh_cn.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/froala_editor_ie8.js"></script>
+
+<![endif]-->
+<script src="js/add-input-area.js"></script>
+
+<script src="js/fineuploader5.3.0.js"></script>
+
+<script src="js/DateTimePicker.js"></script>
+
+<script src="js/notifIt.js"></script>
+
+<script src="js/alert.js"></script>
+
+<script type="text/template" id="pic-template">
+    <div class="qq-uploader-selector qq-uploader qq-gallery">
+        <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+            <li>
+                <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                <div class="qq-progress-bar-container-selector qq-progress-bar-container">
+                    <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                </div>
+                <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                <div class="qq-thumbnail-wrapper">
+                    <a class="preview-link" target="_blank">
+                        <img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
+                    </a>
+                </div>
+                <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
+                <button type="button" class="qq-upload-retry-selector qq-upload-retry">重新上传</button>
+
+                <div class="qq-file-info">
+                    <div class="qq-file-name">
+                        <span class="qq-upload-file-selector qq-upload-file"></span>
+                    </div>
+                    <span class="qq-upload-size-selector qq-upload-size"></span>
+                    <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
+                        <span class="qq-btn qq-delete-icon" aria-label="删除"></span>
+                    </button>
+                    <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
+                        <span class="qq-btn qq-pause-icon" aria-label="暂停"></span>
+                    </button>
+                    <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
+                        <span class="qq-btn qq-continue-icon" aria-label="继续"></span>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</script>
+<script src="js/inputvote.js"></script>
+
+
+</body>
+</html>
