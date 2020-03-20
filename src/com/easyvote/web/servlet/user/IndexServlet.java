@@ -19,7 +19,7 @@ import com.easyvote.function.UserFunction;
  * @author ben
  *首页
  */
-@WebServlet("/index.do")
+@WebServlet("/index.html")
 public class IndexServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp)
@@ -29,7 +29,7 @@ public class IndexServlet extends HttpServlet {
 			Map<String,Object> data=function.loadIndexPage();
 			//轮播数据
 			req.setAttribute("CAROUSEL_ITEMS",data.get("carouselVotes"));
-			req.getRequestDispatcher("/jsp/user/index.jsp").forward(req, resp);
+			req.getRequestDispatcher("/user/index.jsp").forward(req, resp);
 		}catch (Exception e) {
 			throw new RuntimeException(e);
 		}

@@ -1,0 +1,74 @@
+<%@page pageEncoding="utf-8"%>
+<article class="vote">
+  <header>
+    <img class="vote-user-avator" width="50" height="50" src="/avator/nohead.jpg">
+    <h3 class="vote-title">
+      发展党员对象<br>投票
+    </h3>
+  </header>
+  <p class="vote-metadata">
+    <span>
+      <i class="glyphicon glyphicon-time"></i>
+      <time> 3天1小时35分</time>
+    </span>
+    <span>
+      <i class="glyphicon glyphicon-eye-open"></i> 49589
+    </span>
+    <span>
+      <i class="glyphicon glyphicon-comment"></i> 4
+    </span>
+    <span>
+      <i class="glyphicon glyphicon-user"></i>
+      <a href="#">张三</a>
+    </span>
+  </p>
+  <p class="vote-logo-box">
+    <img src="/voteimg/229841b4f4b992a9833437b908936b33.png">
+  </p>
+  <!-- 说明 -->
+  <p class="vote-introductions">应集团要求，上班时间由9：00——18:00改为10:00——19:00，现征求各员工意见，请积极响应投票。</p>
+  <ol class="vote-options-box">
+    <!-- 投票选项 -->
+    <li class="vote-option">
+      <figure class="thumbnail">
+        <img src="/voteimg/229841b4f4b992a9833437b908936b33.png" alt="点击查看大图">
+        <figcaption class="caption">
+          <h4>选项说明</h4>
+          <p>509票（总票数4509，占比21.54%）</p>
+          <p>
+            <a href="#" class="btn btn-primary" role="button">投一票</a>
+          </p>
+        </figcaption>
+      </figure>
+    </li>
+    
+      <li class="vote-option">
+      <figure class="thumbnail">
+        <img src="/voteimg/229841b4f4b992a9833437b908936b33.png" alt="点击查看大图">
+        <figcaption class="caption">
+          <h4>选项说明</h4>
+          <p>509票（总票数4509，占比21.54%）</p>
+          <p>
+            <a href="#" class="btn btn-primary" role="button">投一票</a>
+          </p>
+        </figcaption>
+      </figure>
+    </li>
+      <li class="vote-option">
+      <figure class="thumbnail">
+        <img style="width:150px;height:150px" src="/voteimg/1ea5aaab4303a8ab658400b37ef7b1a7.jpg" alt="点击查看大图">
+        <figcaption class="caption">
+          <h4>选项说明</h4>
+          <p>509票（21.54%）</p>
+          <p>
+            <a href="#" class="btn btn-primary" role="button">投一票</a>
+          </p>
+        </figcaption>
+      </figure>
+    </li>
+  </ol>
+  
+  <p class="vote-action-box"></p>
+
+
+</article>

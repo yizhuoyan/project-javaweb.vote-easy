@@ -12,20 +12,52 @@
 		<display-name>系统启动监听器</display-name>
 		<listener-class>com.easyvote.web.listener.ThisSystemBootstrapListener</listener-class>
 	</listener>
-
+	<filter>
+		<filter-name>图片加载过滤器</filter-name>
+		<filter-class>com.easyvote.web.filter.ImageLoadingFilter</filter-class>
+		<init-param>
+			<param-name>actualPath</param-name>
+			<param-value>/WEB-INF/asserts/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>图片加载过滤器</filter-name>
+		<url-pattern>*.png</url-pattern>
+		<url-pattern>*.gif</url-pattern>
+		<url-pattern>*.jpg</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	<filter>
+		<filter-name>前台界面静态资源路径映射</filter-name>
+		<filter-class>com.easyvote.web.filter.UserPageStaticResourceMappingFilter</filter-class>
+		<init-param>
+			<param-name>staticResourceDir</param-name>
+			<param-value>/user/static</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>前台界面静态资源路径映射</filter-name>
+		<url-pattern>/js/*</url-pattern>
+		<url-pattern>/css/*</url-pattern>
+		<url-pattern>/img/*</url-pattern>
+		<url-pattern>/fonts/*</url-pattern>
+	</filter-mapping>
+ 		
+	
 	<filter>
 		<filter-name>权限过滤器</filter-name>
 		<filter-class>com.easyvote.web.filter.AuthorizeFilter</filter-class>
 		<init-param>
 			<description>白名单</description>
-			<param-name>white-urls</param-name>
+			<param-name>whiteURLs</param-name>
 			<param-value>
-  		/admin/login.do
-  		/jsp/admin/login.jsp  		
-  		</param-value>
+		  		/admin/login.do
+		  		/jsp/admin/login.jsp  		
+	  		</param-value>
 		</init-param>
 		<init-param>
-			<param-name>notLogin</param-name>
+			<param-name>notLoginPath</param-name>
 			<param-value>/jsp/admin/login.jsp</param-value>
 		</init-param>
 	</filter>
@@ -34,16 +66,6 @@
 		<url-pattern>/jsp/admin/*</url-pattern>
 		<url-pattern>/admin/*</url-pattern>
 	</filter-mapping>
-
-	<filter>
-		<filter-name>字符编码过滤器</filter-name>
-		<filter-class>com.easyvote.web.filter.CharacterEncodingFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>字符编码过滤器</filter-name>
-		<url-pattern>*.do</url-pattern>
-	</filter-mapping>
-
 	<filter>
 		<filter-name>数据库连接关闭过滤器</filter-name>
 		<filter-class>com.easyvote.web.filter.CloseConnectionFilter</filter-class>
@@ -51,6 +73,7 @@
 	<filter-mapping>
 		<filter-name>数据库连接关闭过滤器</filter-name>
 		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.html</url-pattern>
 	</filter-mapping>
 
 

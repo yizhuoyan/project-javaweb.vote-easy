@@ -33,7 +33,7 @@ public class ModifyPasswordServlet extends AbstractServlet {
 			dto.setNewPassword(newPassword);
 			dto.setNewPasswordConfirm(newPasswordConfirm);
 			//session
-			LoginUserContext context=this.getUserContext(req);
+			LoginUserContext context=this.getUserContext();
 			dto.setAccount(context.getAccount());
 			//业务对象
 			AdministratorFunction fun=FunctionFactory.getFunction(AdministratorFunction.class);

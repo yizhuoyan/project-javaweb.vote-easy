@@ -1,2 +1,2 @@
 <%@page%>
-<jsp:forward page="/index.do"></jsp:forward>
+<jsp:forward page="/index.html"></jsp:forward>

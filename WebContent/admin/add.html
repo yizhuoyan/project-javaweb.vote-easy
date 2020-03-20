@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加投票类型</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- Ionicons -->
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<!-- Theme style -->
+		<link rel="stylesheet" href="css/adminlte.css">
+	</head>
+
+	<body>
+		<header class="content-header">
+			<h1>
+        			新增投票类型
+      			</h1>
+			<ol class="breadcrumb">
+				<li>
+					<a href="#"><i class="fa fa-dashboard"></i>首页</a>
+				</li>
+				<li>
+					<a href="#">投票类型管理</a>
+				</li>
+				<li>
+					<a href="#">新增</a>
+				</li>
+			</ol>
+			<hr>
+		</header>
+		<main class="container-fluid">
+			<div class="alert alert-info alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button> 类型名称必须填写
+				<br> 类型名称必须填写
+				<br> 类型名称必须填写
+				<br> 类型名称必须填写
+				<br>
+			</div>
+			<!-- form start -->
+			<form role="form" class="box">
+				<div class="box-body">
+					<p class="form-group">
+						<label for="typeCodeEL">*投票类型代号：</label>
+						<input type="text" class="form-control" id="typeCodeEL" placeholder="3-32个字符，支持字母，数字，中横线">
+					</p>
+					<p class="form-group">
+						<label for="typeNameEL">*投票类型名称：</label>
+						<input type="text" class="form-control" id="typeNameEL" placeholder="不超过32个字符">
+					</p>
+					<p class="form-group">
+						<label for="typeRemarkEL">描述：</label>
+						<textarea class="form-control" id="typeRemarkEL" 　rows="5"></textarea>
+					</p>
+				</div>
+				<!-- /.box-body -->
+
+				<div class="box-footer">
+					<button type="submit" class="btn btn-lg btn-primary">保存</button>
+					<a type="button" class="btn btn-info" href="list.html">返回</a>
+				</div>
+			</form>
+
+		</main>
+		<footer>
+
+		</footer>
+		<script src="js/plugins/jquery.min.js"></script>
+		<script src="js/plugins/bootstrap.min.js"></script>
+	</body>
+
+</html>

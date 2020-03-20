@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.easyvote.common.core.SystemConstans;
 import com.easyvote.common.exception.ThisSystemException;
+import com.easyvote.common.util.HttpServletRequestHolder;
 import com.easyvote.dto.LoginUserContext;
 
 /**
@@ -20,7 +21,14 @@ import com.easyvote.dto.LoginUserContext;
  * 
  */
 public class AbstractServlet extends HttpServlet {
-	protected LoginUserContext getUserContext(HttpServletRequest req) {
+	
+	protected void saveUserContext(LoginUserContext uc) {
+		HttpServletRequest req=HttpServletRequestHolder.load();
+		HttpSession session = req.getSession();
+		session.setAttribute(SystemConstans.SESSION_KEY$LOGIN_USER, uc);
+	}
+	protected LoginUserContext getUserContext() {
+		HttpServletRequest req=HttpServletRequestHolder.load();
 		HttpSession session = req.getSession(false);
 		if (session == null) {
 			throw new ThisSystemException("无法获取用户上下文");

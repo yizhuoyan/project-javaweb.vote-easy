@@ -1,0 +1,68 @@
+/*
+投票详情样式
+*/
+ul,ol{
+	list-style: none;
+	padding: 0;
+}	
+.vote{
+	border-radius: 5px;
+	padding: 15px;
+	background: #fff;
+}
+
+.vote-user-avator {
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	vertical-align: top;
+}
+
+.vote-title {
+	display: inline-block;
+	margin: 0;
+	padding-left: 15px;
+}
+
+.vote-metadata {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin: 10px 0;
+	padding: 5px;
+}
+
+.vote-metadata>* {
+	margin-right: 15px;
+	color: #c3c3c3;
+}
+
+.vote-logo-box {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.vote-introductions {
+	text-indent: 2em;
+	font-size: 150%;
+}
+
+.vote-action-box {
+	text-align: right;
+}
+
+.vote-options-box{
+	text-align: center;	
+	margin: 15px 0; 
+}
+.vote-option{
+	display: inline-block;
+	margin:15px;
+	background-color: #EEEEEE; 
+	width:200px;
+	height: 300px;
+	overflow: hidden;
+}
+
+
+
+

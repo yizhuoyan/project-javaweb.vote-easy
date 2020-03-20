@@ -1,0 +1,23 @@
+html{
+	position:relative;
+	min-height: 100%;
+}
+body {
+	padding-top: 60px;
+	margin-bottom: 30px;
+	background-color: #F6F5F2;
+}
+body>footer{
+	position: absolute;
+	line-height: 30px;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	background-color: #222222;
+	color: #eee;
+}
+.thumbnail{
+	margin: 0;
+	background: #eee;
+	height: 100%;
+}

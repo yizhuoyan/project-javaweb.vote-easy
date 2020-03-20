@@ -13,6 +13,7 @@ public class CarouselVoteDto {
 	private String userId;
 	private int totalVotes;
 	private int totalBrowses;
+	
 	private VoteTypeEntity voteType;
 	public String getId() {
 		return id;

@@ -1,0 +1,33 @@
+<%@page pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<section class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="<%=request.getContextPath()%>/">易简·投票网</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<c:if test="${!sessionScope.isLogin}">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="login.html">登陆</a></li>
+							<li><a href="register.html">注册</a></li>
+							<li><a href="help.html">帮助</a></li>
+						</ul>
+					</c:if>
+					<c:if test="${sessionScope.isLogin}">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="login.html">发布投票</a></li>
+							<li><a href="register.html">个人中心</a></li>
+							<li><a href="about.html">帮助</a></li>
+						</ul>
+					</c:if>
+				</div>
+			</section>
+		</nav>
+	</header>

@@ -10,6 +10,7 @@ import com.easyvote.common.exception.ThisSystemException;
 import com.easyvote.dao.SysDicDao;
 import com.easyvote.dao.UserDao;
 import com.easyvote.dao.VoteDao;
+import com.easyvote.service.LoginService;
 
 /**
  * @author ben
@@ -19,13 +20,13 @@ public abstract class AbstractFunction  {
 	protected final SysDicDao dicDao;
 	protected final UserDao userDao;
 	protected final VoteDao voteDao;
-	
-	
+	protected final LoginService loginService;
 
 	public AbstractFunction() {
 		this.dicDao = DaoFactory.getDao(SysDicDao.class);
 		this.userDao = DaoFactory.getDao(UserDao.class);
 		this.voteDao = DaoFactory.getDao(VoteDao.class);
+		loginService=new LoginService();
 	}
 	/**
 	 * 如果s为null,空字符串,空白字符,则返回defaultValue

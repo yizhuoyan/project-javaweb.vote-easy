@@ -6,7 +6,6 @@ public class VoteOptionEntity {
 	private String remark;
 	private int totalvotes;
 	private String belongVoteId;
-	
 	private VoteEntity belongVote;
 	private int orderShow;
 	public String getId() {
